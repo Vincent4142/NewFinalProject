@@ -12,7 +12,7 @@ body {
 	background-color: #E8E8E8;
 	margin: 0px;
 	padding: 0px;
-	font-family: Arial, Helvetica, sans-serif;
+	
 }
 
 #content {
