@@ -24,7 +24,7 @@
 		password="w41420"
 		driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
 		url="jdbc:sqlserver://localhost:1433;databaseName=FinalProject" />
-	
+
     <!-- Default set of monitored resources. If one of these changes, the    -->
     <!-- web application will be reloaded.                                   -->
     <WatchedResource>WEB-INF/web.xml</WatchedResource>

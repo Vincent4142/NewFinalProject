@@ -1,4 +1,4 @@
 browser-choice=1
 browsers=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<web-browsers current\="2">\r\n<system/>\r\n<external location\="C\:\\Program Files\\Internet Explorer\\iexplore.exe" name\="Internet Explorer"/>\r\n<external location\="C\:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" name\="Chrome"/>\r\n</web-browsers>
 eclipse.preferences.version=1
-internalWebBrowserHistory=file\:///C\:/DataSource/FinalProject/FinalProject/WebContent/img/pineapple.jpg|*|file\:/C\:/DataSource/FinalProject/FinalProject/WebContent/img/pineapple.jpg|*|http\://localhost\:8080/FinalProject/fragment/indexTOP.jsp|*|
+internalWebBrowserHistory=file\:/D\:/DataSource/FinalProject/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1586436883272/index.html|*|file\:/D\:/DataSource/eclipse/plugins/org.springsource.ide.eclipse.commons.gettingstarted_3.9.11.201912160745-RELEASE/resources/welcome/index.html|*|file\:///C\:/DataSource/FinalProject/FinalProject/WebContent/img/pineapple.jpg|*|file\:/C\:/DataSource/FinalProject/FinalProject/WebContent/img/pineapple.jpg|*|http\://localhost\:8080/FinalProject/fragment/indexTOP.jsp|*|
