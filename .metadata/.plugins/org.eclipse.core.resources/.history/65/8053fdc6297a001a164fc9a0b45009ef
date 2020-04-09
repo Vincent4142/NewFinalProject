@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<style type="text/css">
+body {
+	background-image: url(img/indexbackground.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+</style>
+</head>
+<body>
+
+	<%@ include file="fragment/indexTOP.jsp"%>
+
+
+	<div id="content">
+	
+	</div>
+
+
+
+
+	<%@ include file="fragment/indexBOTTOM.jsp"%>
+</body>
+</html>

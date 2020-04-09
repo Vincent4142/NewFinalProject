@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+		<context:annotation-config/>
+	
+	<context:component-scan base-package="sea"/>
+ 
+  
+    
+	<mvc:annotation-driven/>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+
+
+	<!-- 如果要使用annotation還要在底下的Namespaces選擇context以及右邊第一個打勾 -->
+	
+	<!--  
+	<bean id="SQLserverDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	    <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+	    <property name="url" value="jdbc:sqlserver://localhost:1433;databaseName=LeonPower"/>
+	    <property name="username" value="sa"/>
+	    <property name="password" value="w41420"/>
+	</bean>
+	-->
+	<bean id="SQLserverJndiDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+	    <property name="jndiName" value="java:comp/env/FinalSubject"></property>
+	</bean> 
+	
+	<!--  
+	<bean id="sessionFactory" destroy-method="destroy" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="SQLserverJndiDataSource"/>
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+	</bean>	  
+	此段已被下面取代，之後不需要hibernate.cfg.xml設定檔
+	-->
+	
+	<bean id="sessionFactory" destroy-method="destroy" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="SQLserverJndiDataSource" />
+		<property name="packagesToScan" value="sampple"></property>
+		<property name="hibernateProperties">
+		   <props>
+		     <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+		     <prop key="hibernate.show_sql">true</prop>
+		     <prop key="hibernate.format_sql">true</prop>
+		     <prop key="hibernate.current_session_context_class">thread</prop>
+		     <!--<prop key="hibernate.hbm2ddl.auto">validate</prop>-->
+		   </props>
+		</property>
+	</bean>	
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+	    <property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+
+</beans>
