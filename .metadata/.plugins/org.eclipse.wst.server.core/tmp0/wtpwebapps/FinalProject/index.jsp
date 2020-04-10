@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>index</title>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 <style type="text/css">
 body {
 	background-color:#E8E8E8;
@@ -22,6 +23,8 @@ body {
 	margin-bottom: 0px;
 	text-align: center;
 }
+
+
 </style>
 </head>
 <body>
@@ -37,5 +40,7 @@ body {
 
 
 	<%@ include file="fragment/indexBOTTOM.jsp"%>
+	
+
 </body>
 </html>

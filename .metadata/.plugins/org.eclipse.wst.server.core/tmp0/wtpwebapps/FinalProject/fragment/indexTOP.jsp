@@ -44,12 +44,14 @@
 #navright {
 	float: right;
 }
+
+
 </style>
 
 </head>
 <body>
 
-	<nav class="nav" style="text-align: center;">
+	<nav id="navid" class="nav" style="text-align: center;">
 	    	
 		<ul class="navul">
 			<li><a href="index.jsp"><img alt="logo" src="img/pineapple.jpg"></a></li>
@@ -66,5 +68,11 @@
 		
 	</nav>
 
+
+
+<script type="text/javascript">
+
+
+</script>
 </body>
 </html>
